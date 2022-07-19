@@ -77,6 +77,9 @@ async def on_message(message):
     if message.content.startswith("$BB"):
         await message.channel.send("Hi! I'm Breach-Bot and I'm here to keep you up to date on the latest in cybersecurity!\n:smile:\t:eyes:")
         """ The below messages are currently commented out as they are not fully operational. They represent what changes I'd like to make in forthcoming versions of BB before BB2."""
+    if message.content.startswith("$Setup"):
+        await message.channel.send("Is this the ")
+
     # if message.content.startswith('$Clear'):
     #     await message.channel.send("\n\nPurging the system.\n\n")
     #     await thePurge()
@@ -153,6 +156,14 @@ This function was created to delete all of the messages it created while testing
 async def thePurge(limit=100):
     await channel.purge()
     #Doesn't work right now - None type?   
+
+
+@bot.listen()
+async def getChannelID():
+
+    
+
+
 
 #Finally, we just need to run the bot with the api-token. Anything below this ***will not run***. So bear that in mind. I hope you enjoy BreachBot version 1.0!
 
